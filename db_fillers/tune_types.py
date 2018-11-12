@@ -8,7 +8,10 @@ client = pymongo.MongoClient('localhost', 27017)
 #### TO DO ####
 # -- Make primary keys the tune_type_names
 # -- Add rest of tune_types
-
+# -- Add ABC notation of characteristic examples
+# -- Rename char_ex to 'archetypes'
+# -- Rename rhythmic_char to 'rhythmic_notes'
+# --------> Fix spelling of rhythmic throughout
 
 
 
