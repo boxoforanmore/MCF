@@ -4,6 +4,15 @@ import pymongo
 # Connect to the server
 client = pymongo.MongoClient('localhost', 27017)
 
+
+#### TO DO ####
+# -- Make primary keys the tune_type_names
+# -- Add rest of tune_types
+
+
+
+
+
 # List of tune types to help allow more dynamicism
 tune_type_names = ['Slow Air (trad)', 'Slow Air (Romantic)', '(Double) Reel', \
               'Single Reel', 'Slow Reel', "Dancer's Hornpipe", \
@@ -108,19 +117,75 @@ tune_types[9]['char_ex'] = None                  # The highland provided should 
 
 
 # 2/4 March
-tune_types[9]['metre'] = ('2/4')
-tune_types[9]['tempo'] = ('crotchet', '+-117 BPM')
-tune_types[9]['rythmic_char'] = ('predominantly quaver rhythm broken by dotted quaver to semiquaver duplets')
-tune_types[9]['strong_beats'] = ('1', '2')
-tune_types[9]['char_ex'] = None                  # The 2/4 march provided should be added here
+tune_types[10]['metre'] = ('2/4')
+tune_types[10]['tempo'] = ('crotchet', '+-117 BPM')
+tune_types[10]['rythmic_char'] = ('predominantly quaver rhythm broken by dotted quaver to semiquaver duplets')
+tune_types[10]['strong_beats'] = ('1', '2')
+tune_types[10]['char_ex'] = None                  # The 2/4 march provided should be added here
 
 
 # 4/4 March
-tune_types[9]['metre'] = ('4/4')
-tune_types[9]['tempo'] = ('crotchet', '+-75 BPM')
-tune_types[9]['rythmic_char'] = ('predominantly crotchet rhythm broken by quaver runs', 'strong accented feel')
-tune_types[9]['strong_beats'] = ('1', '3')
-tune_types[9]['char_ex'] = None                  # The 2/4 march provided should be added here
+tune_types[11]['metre'] = ('4/4')
+tune_types[11]['tempo'] = ('crotchet', '+-75 BPM')
+tune_types[11]['rythmic_char'] = ('predominantly crotchet rhythm broken by quaver runs', 'strong accented feel')
+tune_types[11]['strong_beats'] = ('1', '3')
+tune_types[11]['char_ex'] = None                  # The 4/4 march provided should be added here
+
+
+# 6/8 March
+tune_types[12]['metre'] = ('6/8')
+tune_types[12]['tempo'] = ('dotted crotchet', '+-85 BPM')
+tune_types[12]['rythmic_char'] = ('predominantly motoric quaver rhythm broken by both longer and shorter rhythmic values', 'strong accented feel')
+tune_types[12]['strong_beats'] = ('1', '4')
+tune_types[12]['char_ex'] = None                  # The 6/8 march provided should be added here
+
+
+# 3/4 March
+tune_types[13]['metre'] = ('3/4')
+tune_types[13]['tempo'] = ('crotchet', '+-113 BPM')
+tune_types[13]['rythmic_char'] = ('a motoric quaver rhythm broken by longer rhythmic values', 'strong accented feel')
+tune_types[13]['strong_beats'] = ('1')
+tune_types[13]['char_ex'] = None                  # The 3/4 march provided should be added here
+
+
+# Narrative Air
+tune_types[14]['metre'] = ('3/4')
+tune_types[14]['tempo'] = ('Slow (yet animated)', 'Not discernable')
+tune_types[14]['rythmic_char'] = ('begins with an anacrusis of three quavers', \
+                                  'follows a quaver rhythm that is broken at the second bear of the bar by a longer rhythmic value, usually a crotchet or a dotted crotchet', \
+                                  'heavy rubato is utilised')
+tune_types[14]['strong_beats'] = None
+tune_types[14]['char_ex'] = None                  # The narrative air provided should be added here
+
+
+# 4/4 Set Dance
+tune_types[15]['metre'] = ('4/4')
+tune_types[15]['tempo'] = ('minim', '+-52 BPM')
+tune_types[15]['rythmic_char'] = ('motoric quaver rhythm occasionally broken b longer and shorter rhythmic values', \
+                                  'the B-part tends to be longer, usually twelve bars in length, than the typically eight-bar A-part', \
+                                  'usually arranged by a dancing master for some set choreography')
+tune_types[15]['strong_beats'] = ('1', '3', None)
+tune_types[15]['char_ex'] = None                  # The 4/4 set dance provided should be added here
+
+
+# 6/8 Set Dance
+tune_types[16]['metre'] = ('6/8')
+tune_types[16]['tempo'] = ('dotted crotchet', '+-95 BPM')
+tune_types[16]['rythmic_char'] = ('a dotted quaver - semiquaver - quaver rhythm occasionally broken by longer and shorter rhythmic values', \
+                                  'the B-part tends to be longer, usually twelve bars in length, than the typically eight-bar A-part', \
+                                  'usually arranged by a dancing master for some set choreography')
+tune_types[16]['strong_beats'] = ('1', '4', None)
+tune_types[16]['char_ex'] = None                  # The 6/8 set dance provided should be added here
+
+
+# Single Polka
+# 3/4 March
+tune_types[13]['metre'] = ('2/4')
+tune_types[13]['tempo'] = ('crotchet', '+-160 BPM')
+tune_types[13]['rythmic_char'] = ('motoric quaver rhythm with occational dotted quaver to semiquaver rhythms and use of crotchets at cadence points')
+tune_types[13]['strong_beats'] = ('1', '2')
+tune_types[13]['char_ex'] = None                  # The single polka provided should be added here
+
 
 
 
@@ -132,19 +197,16 @@ tunedb = client.mcf
 
 # Drop collection
 print('Dropping collection person')
-testdb.mcf.drop()
+tunedb.tune_types.drop()
 
 # Add a tune-type
 print('Adding tune-types')
 employee = dict(name='', age=30)
-testdb.person.insert(employee)
+for tune_type in tune_types:
+    mcf.tune_types.insert(tune_type)
 
-# Fetch the first entry from collection
-person = testdb.person.find_one()
-if person:
-    print('Name: %s, Age %s' % (person['name'], person['age']))
 
-# Fetch list of all databases
+# Fetch list of all databases (mcf should be present)
 print("DB's present on the system:")
 for db in client.list_databases():
     print('    %s' % db)
