@@ -182,7 +182,6 @@ tune_types[16]['char_ex'] = None                  # The 6/8 set dance provided s
 
 
 # Single Polka
-# 3/4 March
 tune_types[13]['metre'] = ('2/4')
 tune_types[13]['tempo'] = ('crotchet', '+-160 BPM')
 tune_types[13]['rythmic_char'] = ('motoric quaver rhythm with occational dotted quaver to semiquaver rhythms and use of crotchets at cadence points')
@@ -190,6 +189,44 @@ tune_types[13]['strong_beats'] = ('1', '2')
 tune_types[13]['char_ex'] = None                  # The single polka provided should be added here
 
 
+# Double Polka
+tune_types[13]['metre'] = ('2/4')
+tune_types[13]['tempo'] = ('crotchet', '+-114 BPM')
+tune_types[13]['rythmic_char'] = ('rhythm based on semiquavers broken by quavers', 'occasionally featuring dotted quavers to semiquavers')
+tune_types[13]['strong_beats'] = ('1', '2')
+tune_types[13]['char_ex'] = None                  # The double polka  provided should be added here
+
+
+# Early Jig
+tune_types[13]['metre'] = ('6/4')
+tune_types[13]['tempo'] = ('dotted minim', '+-60 BPM')
+tune_types[13]['rythmic_char'] = ('it is based on a crotchet rhythm', 'phrases tend to open on a minim value', 'A-part usually shorter than the B-part')
+tune_types[13]['strong_beats'] = ('1', '4')
+tune_types[13]['char_ex'] = None                  # The early jig provided should be added here
+
+
+# Early Slip Jig
+tune_types[13]['metre'] = ('9/4')
+tune_types[13]['tempo'] = ('dotted minim', '+-60 BPM')
+tune_types[13]['rythmic_char'] = ('crotchet based rhythm', 'occasionally broken by minims', 'A-part usually 4-bars', 'B-part usually 6-bars')
+tune_types[13]['strong_beats'] = (None)
+tune_types[13]['char_ex'] = None                  # The early slip jig provided should be added here 
+
+
+# Single Jig
+tune_types[13]['metre'] = ('6/8')
+tune_types[13]['tempo'] = ('dotted crotchet', '+-137 BPM')
+tune_types[13]['rythmic_char'] = ('primarily but not exclusively features the crotchet - quaver rhythm', 'three quaver group followed by a crotchet or dotted crotchet')
+tune_types[13]['strong_beats'] = ('1', '2')
+tune_types[13]['char_ex'] = None                  # The early jig provided should be added here
+
+
+# Double Jig
+tune_types[13]['metre'] = ('6/8')
+tune_types[13]['tempo'] = ('crotchet', '+-127 BPM')
+tune_types[13]['rythmic_char'] = ('it is based on a crotchet rhythm', 'phrases tend to open on a minim value')
+tune_types[13]['strong_beats'] = ('1', '4')
+tune_types[13]['char_ex'] = None                  # The early jig provided should be added here
 
 
 
