@@ -223,10 +223,64 @@ tune_types[13]['char_ex'] = None                  # The early jig provided shoul
 
 # Double Jig
 tune_types[13]['metre'] = ('6/8')
-tune_types[13]['tempo'] = ('crotchet', '+-127 BPM')
-tune_types[13]['rythmic_char'] = ('it is based on a crotchet rhythm', 'phrases tend to open on a minim value')
+tune_types[13]['tempo'] = ('dotted crotchet', '+-127 BPM')
+tune_types[13]['rythmic_char'] = ('based on a motoric quaver rhythm', 'occasionally broken by the crotchet - quaver rhythm', \
+                                  'sometimes marked a phrase endings by three quavers followed by a dotted crotchet')
 tune_types[13]['strong_beats'] = ('1', '4')
 tune_types[13]['char_ex'] = None                  # The early jig provided should be added here
+
+
+# Heavy Double Jig
+tune_types[13]['metre'] = ('6/8')
+tune_types[13]['tempo'] = ('dotted crotchet', '+-64 BPM')
+tune_types[13]['rythmic_char'] = ('based on the motoric quaver and crotchet - quaver rhythms', 'punctuated by semiquaver triplets on the fourth quaver')
+tune_types[13]['strong_beats'] = ('1', '4')
+tune_types[13]['char_ex'] = None                  # The heavy double jig provided should be added here
+
+
+# Heavy Single Jig
+tune_types[13]['metre'] = ('6/8')
+tune_types[13]['tempo'] = ('dotted crotchet', '+-64 BPM')     # See page 118 for details -- Martin gives an 's'
+tune_types[13]['rythmic_char'] = ('uses the quaver and crotchet - quaver rhythms', 'punctuated by semiquaver triplets on the fourth quaver')
+tune_types[13]['strong_beats'] = ('1', '4')
+tune_types[13]['char_ex'] = None                  # The heavy single jig provided should added here
+
+
+# Slide
+tune_types[13]['metre'] = ('12/8')
+tune_types[13]['tempo'] = ('dotted crotchet', '+-165 BPM')
+tune_types[13]['rythmic_char'] = ('primarily but not exclusively features the crotchet - quaver rhythm', 'has a strong feel of four beats in the bar', \
+                                  'feels closer to 4/4 than 12/8', 'most likely to end on two dotted crotchets')
+tune_types[13]['strong_beats'] = ('1', '2', '3', '4')
+tune_types[13]['char_ex'] = None                  # The heavy single jig provided should added here
+
+
+# Slip Jig
+tune_types[13]['metre'] = ('9/8')
+tune_types[13]['tempo'] = ('dotted crotchet', '+-144 BPM')
+tune_types[13]['rythmic_char'] = ('based on a motoric quaver rhythm', 'occasionally broken by the crotchet - quaver rhythm but may also end on dotted crotchets', \
+                                  'played with a feel of three groups of three quavers')
+tune_types[13]['strong_beats'] = (None)
+tune_types[13]['char_ex'] = None                  # The heavy single jig provided should added here
+
+
+# Hop Jig
+tune_types[13]['metre'] = ('9/8')
+tune_types[13]['tempo'] = ('dotted minim tied to a dotted crotchet', '+-73 BPM')
+tune_types[13]['rythmic_char'] = ('a strong feel of three beats in the bar and largely crotchet - quaver rhythmic feel', \
+                                  'pulse of three, punchy dotted crotchets in a bar')
+tune_types[13]['strong_beats'] = ('1', '2', '3')
+tune_types[13]['char_ex'] = None                  # The heavy single jig provided should added here
+
+
+# Waltz
+tune_types[13]['metre'] = ('/4')
+tune_types[13]['tempo'] = ('dotted minim', '+-60 BPM')
+tune_types[13]['rythmic_char'] = ('crotchet based rhythm', 'occasionally broken by minims', 'A-part usually 4-bars', 'B-part usually 6-bars')
+tune_types[13]['strong_beats'] = (None)
+tune_types[13]['char_ex'] = None                  # The heavy single jig provided should added here
+
+
 
 
 
