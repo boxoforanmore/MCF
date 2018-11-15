@@ -300,12 +300,11 @@ tune_types[30]['char_ex'] = None                  # The 7/8 tune provided should
 tunedb = client.mcf
 
 # Drop collection
-print('Dropping collection person')
+print('Dropping collection tune_types')
 tunedb.tune_types.drop()
 
 # Add a tune-type
 print('Adding tune-types')
-employee = dict(name='', age=30)
 for tune_type in tune_types:
     mcf.tune_types.insert(tune_type)
 
